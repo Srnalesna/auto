@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test z otázok (50 náhodných)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .question {
+      margin: 20px 0;
+      padding: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .options {
+      margin-top: 10px;
+    }
+    .options label {
+      display: block;
+      margin-bottom: 6px;
+      cursor: pointer;
+    }
+    .correct {
+      color: green;
+      font-weight: bold;
+    }
+    .incorrect {
+      color: red;
+      font-weight: bold;
+    }
+    .result {
+      margin-top: 10px;
+    }
+    button {
+      margin: 10px 5px;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+    .score {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Test: 50 náhodných otázok</h1>
+<div class="intro">
+  <p>
+    Kliknite na <strong>"Spustiť test"</strong>, zobrazí sa 50 náhodných otázok 
+    z celkového balíka. Potom stlačte 
+    <strong>"Vyhodnotiť test"</strong>, aby ste videli, ktoré boli správne.
+  </p>
+</div>
+
+<div id="quizContainer"></div>
+
+<div style="text-align:center;">
+  <button id="startBtn">Spustiť test (50 otázok)</button>
+  <button id="submitBtn" style="display:none;">Vyhodnotiť test</button>
+</div>
+
+<div id="scoreContainer" class="score"></div>
+
+<!-- Najprv načítame data.js s ALL_QUESTIONS -->
+<script src="data.js"></script>
+<!-- Následne náš hlavný skript quiz.js -->
+<script src="quiz.js"></script>
+
+</body>
+</html>
